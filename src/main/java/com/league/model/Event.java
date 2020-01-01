@@ -13,15 +13,17 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @Entity
-public class League {
+public class Event {
+
     @Id
     @GeneratedValue
-    private Long leagueId;
-    private String leagueName;
-    private String rules;
+    private  Long eventId;
+    private String eventName;
+    private String eventDescription;
     private LocalDate startDate;
     private LocalDate endDate;
+    private Long leagueId;
     private LocalDateTime createTime;
-    private List<Event> eventList;
-    private List<Member> memberList;
+    private List<EventResult> results;
+
 }
